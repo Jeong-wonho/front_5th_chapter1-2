@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>항해플러스 SNS</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript">
+      // 리다이렉트된 경로 복원
+      (function () {
+        const redirect = sessionStorage.getItem("redirect");
+        if (redirect) {
+          sessionStorage.removeItem("redirect");
+          const baseUrl = "/front_5th_chapter1-2";
+          if (redirect !== baseUrl) {
+            location.replace(baseUrl + "/" + redirect);
+          }
+        }
+      })();
+    </script>
     <script type="module" crossorigin src="/front_5th_chapter1-2/assets/hash-qPV-M7Fu.js"></script>
     <link rel="modulepreload" crossorigin href="/front_5th_chapter1-2/assets/render-CxHLvrfA.js">
   </head>
